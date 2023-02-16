@@ -1,23 +1,9 @@
-# medusa-plugin-meilisearch
+# Temporary fix for medusa + meilisearch v1.0.0
 
-Meilisearch Plugin for Medusa to search for products.
+See this discussion: https://github.com/medusajs/medusa/discussions/3277
 
-Learn more about how you can use this plugin in the [documentaion](https://docs.medusajs.com/add-plugins/meilisearch).
+## To use
 
-## Options
-
-```js
-{
-  config: {
-    host: "[your meilisearch host]",
-  },
-  settings: {
-    "[indexName]": "[meilisearch settings passed to meilisearch's `updateSettings()` method]"
-    // example
-    products: {
-      searchableAttributes: ["title", "description", "variant_sku"],
-      displayedAttributes: ["title", "description", "variant_sku", "thumbnail", "handle"],
-    }
-  }
-}
-```
+* copy these files into your Medusa backend repo, say in a directory called `dependencies`
+* remove `medusa-plugin-meilisearch`
+* `npm install ./dependencies/medusa-plugin-meilisearch`
